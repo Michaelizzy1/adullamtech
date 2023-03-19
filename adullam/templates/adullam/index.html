@@ -1,0 +1,68 @@
+{% extends 'adullam/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <p></p>
+    <div class="text-center">
+        <h3 class="heading">WELCOME</h3>
+    </div>
+    <P></P>
+    <div>
+        <p>
+            Adullam Technologies Incorporation is a fast growing technology inclined company in Africa that focuses on software engineering and graphics design. The incorporation focuses on delivering excellently to all her costumers with the best possible and affordable price rates as a way of giving to the society and fostering economic and technological development to Africa and the world at large.
+        </p>
+        <div>
+            <div class="heading">
+            <h4>Our Services Includes</h4>
+            </div>
+            <ul>
+                <li>Website Creation</li>
+                <li>Graphics Design</li>
+                <li>UI/UX Design</li>
+                <li>Mobile App Development</li>
+                <li>Freelancing</li>
+            </ul>
+        </div>
+
+          </div>
+        <p></p>
+        <p></p><br>
+        <div>
+            <div class="text-center">
+                <p></p>
+                <div class="heading">
+                <a><h4>RECENT WORKS</h4></a>
+                    {% for image in img %}
+                      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                          <img src="{{image.image.url}}" class="d-block w-100" alt="...">
+                        </div>
+                    {% endfor %}
+                       {% for image in images %}
+                        <div class="carousel-item" data-bs-interval="3000">
+                          <img src="{{image.img.url}}" class="d-block w-100" alt="...">
+                        </div>
+                       {% endfor %}
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

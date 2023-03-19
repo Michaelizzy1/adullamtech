@@ -1,0 +1,31 @@
+{% extends 'adullam/base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="text-center">
+        <div class="heading">
+            <h4>RECENT SITES</h4>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            {% for site in sites %}
+                <a href="{% url 'index' %}" style="text-decoration: none;">
+                <div class="col-sm-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{site.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">{{site.description}}</p>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+                </a>
+            {% endfor %}
+           </div>
+    </div>
+
+</div>
+
+{% endblock %}

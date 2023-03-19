@@ -1,0 +1,1 @@
+web: gunicorn adullamtech.wsgi --log-file -

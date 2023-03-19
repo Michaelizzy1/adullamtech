@@ -1,0 +1,23 @@
+{% extends 'adullam/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="text-center">
+        <h3 class="heading">About Us</h3>
+    </div>
+    <p>We specialize in Graphic designs and Software Engineering.
+        We provide remote services for your and deliver within the specified time interval.
+        You can reach out to any of our platforms to get your job done as soon as possible and
+        at a very affordable rate
+    </p><br>
+    <p></p>
+    <div class="text-center">
+        {% for image in img %}
+            <img src="{{image.image.url}}" alt="Adullam Technologies Incorporation" height="90%" width="90%">
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
